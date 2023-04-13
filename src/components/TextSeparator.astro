@@ -1,0 +1,18 @@
+---
+export interface Props {
+    size?: string;
+    class?: string;
+}
+
+const { size = 'md' } = Astro.props
+
+const sizes = {
+    sm: 'w-24 h-1',
+    md: 'w-36 h-2',
+    lg: 'w-48 h-3'
+}
+
+const padding = sizes[size] ?? sizes.md
+---
+
+<span class={`${Astro.props.class || ''} ${padding}  bg-gradient-to-r from-jsyellow `}></span>

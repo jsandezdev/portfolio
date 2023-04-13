@@ -1,0 +1,15 @@
+---
+import NodeIcon from '../components/icons/Node.astro'
+
+export interface Props {
+    label: string;
+    icon?: string;
+}
+
+const { label, icon } = Astro.props
+---
+
+<span class="border rounded-full text-sm align-middle flex flex-row px-3 py-1 gap-2 text-jswhite">
+    { icon && <NodeIcon /> }
+    <span class="inline-block">{label}</span>
+</span>

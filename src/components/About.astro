@@ -1,0 +1,28 @@
+---
+import Section from './Section.astro'
+import SectionTitle from './SectionTitle.astro';
+---
+
+<Section id='about' background='dark'>
+    <SectionTitle>Sobre mí</SectionTitle>
+    <div class="grid grid-cols-12 gap-6 sm:gap-12 items-center">
+        <div class="col-span-12 lg:col-span-5 justify-center">
+            <img class="border-4 border-jscyan rounded-md w-full max-w-full mx-auto lg:mr-0 sm:max-w-sm aspect-square object-cover overflow-hidden" src="https://stefantopalovicdev.vercel.app/static/media/about-img.62b47e7f183d4b4e9feb.webp" alt="Mi foto"/>
+        </div>
+        <div class="col-span-12 lg:col-span-7 text-jslightgrey text-md md:text-lg">
+            <p class="mb-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, tempore molestias et dolore cum vitae nostrum asperiores molestiae quaerat minus nemo deleniti quas voluptate debitis qui similique obcaecati labore harum.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, tempore molestias et dolore cum vitae nostrum asperiores molestiae quaerat minus nemo deleniti quas voluptate debitis qui similique obcaecati labore harum.
+            </p>
+            <p class="mb-4">Algunas de las tecnologías con las que he trabajado últimamente:</p>
+            <ul class="grid grid-cols-2 gap-2 list-style-circled">
+                <li>Astro</li>
+                <li>JavaScript</li>
+                <li>NodeJs</li>
+                <li>React</li>
+                <li>TailwindCSS</li>
+                <li>TypeScript</li>
+            </ul>
+        </div>
+    </div>
+</Section>

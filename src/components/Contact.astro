@@ -1,0 +1,20 @@
+---
+import Button from './Button.astro'
+import Input from './Input.astro'
+import Section from './Section.astro'
+import SectionTitle from './SectionTitle.astro'
+import Textarea from './Textarea.astro';
+---
+
+<Section id='contact'>
+    <div class="container mx-auto">
+        <SectionTitle class="flex justify-center mb-5">Contacto</SectionTitle>
+        <div class="flex justify-center mb-10 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, perspiciatis nemo? Libero facere sunt, esse, quasi pariatur culpa ipsam consequuntur</div>
+        <form action="" class="text-center max-w-xl mx-auto">
+            <Input name='name' type='text' placeholder="Introduce tu nombre" />
+            <Input name='email' type='email' placeholder="Introduce tu email" />
+            <Textarea name='message' rows={6} placeholder="Introduce tu mensaje" />
+            <Button variant='primary' size="lg">Enviar mensaje</Button>
+        </form>
+    </div>
+</Section>

@@ -1,0 +1,17 @@
+---
+import TimeLineEntry from './TimeLineEntry.astro'
+
+export interface Props<T> {
+    items: Array<T>;
+    class?: string;
+}
+
+const { items } = Astro.props;
+---
+
+<div class={`${Astro.props.class || ''} relative max-w-screen-lg mx-auto`}>
+    <span class="z-10 h-full hidden lg:block border lg:absolute lg:left-1/2 border-jslightgrey"></span>
+    <div class="lg:pt-10">
+        { items.map((item, index) => <TimeLineEntry entry={item} isEven={index % 2 === 0} />)}
+    </div>
+</div>

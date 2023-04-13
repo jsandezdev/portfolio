@@ -1,0 +1,63 @@
+---
+import Button from './Button.astro'
+import Section from './Section.astro'
+import SectionTitle from './SectionTitle.astro'
+import TimeLine from './TimeLine.astro'
+
+const items = [
+    {
+        label: 'Agosto 2017 - Agosto 2020',
+        title: 'Desarrollador web',
+        title2: 'Engel Systems',
+        subtitle: 'Barberà del Vallés, Barcelona',
+        content: [
+            { title: 'Desarrollo de aplicaciones web client-side con AngularJS.' },
+            { title: 'Desarrollo de plataforma ecommerce con Symfony 3.' },
+            { title: 'Creación y gestión de bases de datos MySQL y MongoDB.' },
+            { title: 'Integración de API REST de terceros.' },
+            { title: 'Integración con TPV y pasarelas de pago.' },
+            { title: 'Maquetación responsive con HTML5, CSS3, Javascript y jQuery compatible con todos los navegadores. Framework Bootstrap.' },
+            { title: 'Control de versiones con GIT.' },
+            { title: 'Creación y mantenimiento de páginas web con Wordpress.' }
+        ]
+    },
+    {
+        label: 'Mayo 2015 - Agosto 2017',
+        title: 'Desarrollador web',
+        title2: 'OnetechTeam Consulting',
+        subtitle: 'Rubí, Barcelona',
+        content: [
+            { title: 'Desarrollo de aplicaciones back-end y front-end en PHP con Symfony 2 y 3' },
+            { title: 'Creación y gestión de bases de datos MySQL y Oracle' },
+            { title: 'Desarrollo y consumo de API REST con autenticación oAuth2' },
+            { title: 'Maquetación responsive con HTML5, CSS3, Javascript y jQuery (compatible con todos los navegadores). Framework Bootstrap' },
+            { title: 'Control de versiones con GIT y Subversion' },
+            { title: 'Creación e integración de temas para Wordpress' }
+        ]
+    },
+    {
+        label: 'Septiembre 2014 - Enero 2015',
+        title: 'Becario',
+        title2: 'Euromaster',
+        subtitle: 'Sentmenat, Barcelona',
+        content: [
+            { title: 'Desarrollo de plataforma de gestión J2EE en estructura MVC' },
+            { title: 'Maquetación con HTML5, CSS3, Javascript y jQuery' },
+            { title: 'Programación en Java' },
+            { title: 'Utilización de base de datos PostgreSQL con ORM Hibernate' },
+            { title: 'Control de versiones con GIT' },
+            { title: 'Metodología SCRUM' }
+        ]
+    }
+]
+---
+
+<Section id='experience'>
+    <SectionTitle>Experiencia</SectionTitle>
+    <div class="text-center relative flex flex-col">
+        <TimeLine class="lg:my-10" items={items}/>
+    </div>
+    <div class="sm:flex sm:flex-col sm:items-center">
+        <Button variant="light">Descargar CV</Button>
+    </div>
+</Section>

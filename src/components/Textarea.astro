@@ -1,0 +1,11 @@
+---
+export interface Props {
+	name: string;
+	placeholder?: string;
+    rows?: number;
+}
+
+const { placeholder = '', rows = 5, name } = Astro.props;
+---
+
+<textarea name={name} rows={rows} placeholder={placeholder} class="border mb-4 border-jsgrey placeholder:text-jsgrey bg-transparent rounded-md py-2 px-3 block w-full"></textarea>

@@ -1,0 +1,18 @@
+---
+import Button from './Button.astro'
+import GradientText from './GradientText.astro'
+import Section from './Section.astro'
+---
+
+<Section id='home' class='md:min-h-screen'>
+    <div class="flex flex-col align-middle justify-center md:px-12 lg:px-24 xl:px-36 xxl:px-48">
+        <span class="text-lg sm:text-xl lg:text-2xl tracking-widest text-jsyellow mb-2">Hola, soy</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-3"><GradientText>Jordi Sández</GradientText></h1>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 text-jslightgrey">Desarrollador Frontend</h2>
+        <p class="text-jslightgrey mb-12 md:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod non quis, dignissimos tempore distinctio, nihil ex vel similique ipsam, quidem ab. Qui reiciendis saepe, totam eum alias esse pariatur aperiam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod non quis, dignissimos tempore distinctio, nihil ex vel similique ipsam, quidem ab. Qui reiciendis saepe, totam eum alias esse pariatur aperiam</p>
+        <div class="flex flex-col sm:flex-row gap-4 lg:gap-8">
+            <Button variant='primary'>Proyectos</Button>
+            <Button variant="light">Descargar CV</Button>
+        </div>
+    </div>
+</Section>
