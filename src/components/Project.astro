@@ -14,8 +14,8 @@ export interface Props {
 const { isEven, project } = Astro.props
 ---
 
-<div class="col-span-2 sm:col-span-1 lg:col-span-2 grid grid-cols-12 bg-gradient-to-r from-jscyan/5 to-jspink/5 rounded-xl bg-opacity-10 overflow-hidden">
-    <div class={`col-span-12 lg:col-span-6 lg:p-5 flex items-stretch ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+<div class="col-span-2 sm:col-span-1 lg:col-span-2 grid grid-cols-12 bg-gradient-to-r from-jscyan/5 to-jspink/5 rounded-xl bg-opacity-10 overflow-hidden" data-aos={`${isEven ? 'fade-left' : 'fade-right'}`} data-aos-delay="200">
+    <div class={`col-span-12 lg:col-span-7 lg:p-5 flex items-stretch ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
         <div class="relative flex items-stretch">
             <img class="w-full max-w-full mx-auto lg:mr-0 aspect-square lg:aspect-video object-cover overflow-hidden" src={project.image}/>
             <div class="absolute bottom-2 right-2 flex flex-row gap-3 items-center">
@@ -24,7 +24,7 @@ const { isEven, project } = Astro.props
             </div>
         </div>
     </div>
-    <div class={`col-span-12 lg:col-span-6 p-5 flex flex-col justify-center ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+    <div class={`col-span-12 lg:col-span-5 p-5 flex flex-col justify-center ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
         <span class="mb-1 block font-bold text-lg uppercase">
             <GradientText>{project.title}</GradientText>
         </span>

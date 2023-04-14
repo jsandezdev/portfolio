@@ -7,8 +7,9 @@ import Textarea from './Textarea.astro';
 
 <form
     id="contact-form"
-    class="text-center max-w-lg mx-auto no-validated"
+    class="text-center max-w-xl mx-auto no-validated"
     novalidate
+    data-aos="fade-up"
 >
     <FormGroup>
         <Input name='name' type='text' placeholder="Introduce tu nombre" required />
@@ -17,7 +18,7 @@ import Textarea from './Textarea.astro';
         <Input name='email' type='email' placeholder="Introduce tu email" required />
     </FormGroup>
     <FormGroup>
-        <Textarea name='message' rows={6} placeholder="Introduce tu mensaje" required />
+        <Textarea name='message' rows={10} placeholder="Introduce tu mensaje" required />
     </FormGroup>
     <Button type="submit" variant='primary'>Enviar mensaje</Button>
 </form>
