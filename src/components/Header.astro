@@ -10,10 +10,10 @@ const links = [
 ];
 ---
 
-<header class="bg-jspurple-darker fixed top-0 left-0 right-0 z-50 " id="header">
+<header class="bg-jspurple-darker fixed top-0 left-0 right-0 z-50" id="header">
     <nav class="flex lg:flex-nowrap items-center justify-between flex-wrap lg:flex-row p-4 max-w-screen-xl mx-auto px-5">
         <input type='checkbox' id='menu' class='peer' hidden />
-        <a href="#" class="flex items-center flex-shrink-0 text-white font-bold text-xl">
+        <a href="#home" class="flex items-center flex-shrink-0 text-white font-bold text-xl">
             JS<GradientText>andez.dev</GradientText>
         </a>
         <label for="menu" id="toggle-menu" class="peer-checked:[&>.open]:hidden peer-checked:[&>.close]:block cursor-pointer relative z-50 lg:hidden flex items-center px-3 py-2 text-jslightgrey hover:text-jswhite transition">
@@ -46,7 +46,7 @@ const links = [
     }
 </style>
 
-<script type="module">
+<script type="module" is:inline>
 const menuInput = document.getElementById('menu')
 const headerHeight = document.getElementById('header').clientHeight
 

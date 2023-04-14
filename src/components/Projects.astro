@@ -1,50 +1,13 @@
 ---
 import SectionTitle from './SectionTitle.astro'
-import reactIcon from '../../public/react.svg'
-import NodeIcon from './icons/Node.astro'
-import astroIcon from '../../public/astro.svg'
-import tailwindIcon from '../../public/tailwind.svg'
 import Section from './Section.astro'
 import Project from './Project.astro'
-
-const languages = {
-    react: { label: 'React', icon: reactIcon },
-    node: { label: 'NodeJs', icon: NodeIcon },
-    astro: { label: 'Astro', icon: astroIcon },
-    tailwind: { label: 'TailwindCSS', icon: tailwindIcon }
-}
-
-const projects = [
-    {
-        title: 'Padrinos Birds Friends',
-        subtitle: 'App gestión padrinos',
-        content: 'Lorem ipsum dolor sit amet consectetur ad eque natus, odit officiis est alias sunt, nostru Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
-        tags: [languages.react, languages.node, languages.astro, languages.tailwind]
-    },
-    {
-        title: 'Padrinos Birds Friends',
-        subtitle: 'App gestión padrinos',
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
-        tags: [languages.react, languages.node, languages.astro, languages.tailwind]
-    },
-    {
-        title: 'Padrinos Birds Friends',
-        subtitle: 'App gestión padrinos',
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempione! Eaque animi corrupti consequuntur omnis',
-        tags: [languages.react, languages.node, languages.astro, languages.tailwind]
-    },
-    {
-        title: 'Padrinos Birds Friends',
-        subtitle: 'App gestión padrinos',
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing  natus, odit officiis est alias s, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis Lorem ipsum d iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
-        tags: [languages.react, languages.node, languages.astro, languages.tailwind]
-    }
-]
+import { projects } from '../data/projects.astro'
 ---
 
 <Section id='projects' background='dark'>
     <SectionTitle>Proyectos</SectionTitle>
-    <div class="grid grid-cols-2 gap-4 lg:gap-12 max-w-screen-lg mx-auto">
+    <div class="grid grid-cols-2 gap-4 lg:gap-12 items-start max-w-screen-lg mx-auto">
         { projects.map((project, index) => <Project isEven={index % 2 === 0} project={project}/>) }
     </div>
 </Section>

@@ -1,11 +1,21 @@
 ---
 export interface Props {
-	name: string;
-	type?: string;
-	placeholder?: string;
+    name: string;
+    type?: any;
+    placeholder?: string;
+    required?: boolean
 }
 
-const { type = 'text', placeholder = '', name } = Astro.props;
+const { type = 'text', placeholder = '', name, required } = Astro.props
+
+console.log(required);
 ---
 
-<input name={name} type={type} placeholder={placeholder} class="border mb-4 border-jsgrey placeholder:text-jsgrey bg-transparent rounded-md py-2 px-3 block w-full"/>
+<label for={name} class="sr-only">{name}</label>
+<input
+    name={name}
+    type={type}
+    placeholder={placeholder}
+    required={required || false}
+    class="border border-jsgrey placeholder:text-jsgrey bg-transparent rounded-md transition-all outline-none hover:border-jslightgrey focus:border-jsyellow py-2 px-3 block w-full"
+/>

@@ -1,11 +1,16 @@
 ---
 export interface Props {
-    variant: string;
-    size?: string;
+    variant: 'primary' | 'light';
+    size?: 'sm' | 'md' | 'lg';
     class?: string;
+    element?: 'anchor' | 'button';
+    href?: string;
+    type?: 'button' | 'submit' | 'reset';
+    download?: string;
+    onclick?: any;
 }
 
-const { variant, size = 'md' } = Astro.props
+const { variant, size = 'md', element = 'button', href = '#', type, download, onclick } = Astro.props
 
 const colors = {
     primary: 'bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite',
@@ -21,8 +26,26 @@ const sizes = {
 }
 
 const padding = sizes[size] || sizes.md
+
+const classes = `${Astro.props.class || ''} ${color} ${padding} rounded-full transition-all duration-300 font-bold block w-full text-center sm:w-auto sm:inline-block tracking-wider`
 ---
 
-<button class={`${Astro.props.class || ''} ${color} ${padding} rounded-full transition-all duration-300 font-bold block w-full sm:w-auto sm:inline-block tracking-wider`}>
-    <slot/>
-</button>
+{ element === 'button' && (
+    <button
+        type={type}
+        onclick={onclick}
+        class={classes}
+    >
+        <slot/>
+    </button>
+)}
+
+{ element === 'anchor' && (
+    <a
+        href={href}
+        download={download}
+        class={classes}
+    >
+        <slot/>
+    </a>
+)}

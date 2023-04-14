@@ -1,0 +1,29 @@
+<div class="mb-4">
+    <slot />
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 text-start">
+        Campo obligatorio
+    </div>
+    <div class="invalid-feedback text-red-400 text-sm mt-1 text-start">
+        El valor introducido no es válido
+    </div>
+</div>
+
+<style is:global>
+    .invalid-feedback,
+    .empty-feedback {
+        display: none;
+    }
+
+    .validated :placeholder-shown:invalid ~ .empty-feedback {
+        display: block;
+    }
+
+    .validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+        display: block;
+    }
+
+    .is-invalid,
+    .validated :invalid {
+        @apply border-red-600;
+    }
+</style>

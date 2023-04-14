@@ -1,0 +1,17 @@
+---
+export type Tag = {
+    label: string;
+    icon: any;
+    class: string;
+}
+
+export type Project = {
+    title: string;
+    subtitle: string;
+    content: string;
+    github?: string;
+    link?: string;
+    image: string;
+    tags: Array<Tag>;
+}
+---

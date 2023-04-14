@@ -1,11 +1,19 @@
 ---
 export interface Props {
-	name: string;
-	placeholder?: string;
+    name: string;
+    placeholder?: string;
     rows?: number;
+    required?: boolean
 }
 
-const { placeholder = '', rows = 5, name } = Astro.props;
+const { placeholder = '', rows = 5, name, required } = Astro.props;
 ---
 
-<textarea name={name} rows={rows} placeholder={placeholder} class="border mb-4 border-jsgrey placeholder:text-jsgrey bg-transparent rounded-md py-2 px-3 block w-full"></textarea>
+<label for={name} class="sr-only">{name}</label>
+<textarea
+    name={name}
+    rows={rows}
+    placeholder={placeholder}
+    required={required || false}
+    class="border border-jsgrey placeholder:text-jsgrey bg-transparent rounded-md transition-all outline-none hover:border-jslightgrey focus:border-jsyellow py-2 px-3 block w-full">
+</textarea>
