@@ -1,13 +1,18 @@
 ---
 export interface Props {
-    label: string;
-    icon?: any;
-    class?: string;
+    label: string
+    icon?: any
+    class?: string
 }
 
 const { label, icon: Icon } = Astro.props
 ---
 
-<span class={`border rounded-full text-sm items-center flex flex-row px-3 py-1 gap-2 ${Astro.props.class || ''}`}>
-    <Icon /> <span class="inline-block">{label}</span>
+<span
+    class={`border rounded-full text-sm items-center flex flex-row px-3 py-1 gap-2 ${
+        Astro.props.class || ''
+    }`}
+>
+    <Icon />
+    <span class='inline-block'>{label}</span>
 </span>

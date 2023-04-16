@@ -1,8 +1,8 @@
 ---
 export interface Props {
-    id: string;
-    class?: string;
-    background?: 'default' | 'dark' | 'darker';
+    id: string
+    class?: string
+    background?: 'default' | 'dark' | 'darker'
 }
 
 const { id, background = 'default' } = Astro.props
@@ -16,8 +16,13 @@ const bgClasses = {
 const bgClass = bgClasses[background] || bgClasses.default
 ---
 
-<section class={`${Astro.props.class || ''} ${bgClass || ''} block py-8 sm:py-16 md:py-24 lg:py-32 xl:py-40 px-5`} id={id}>
-    <div class="container xl:max-w-screen-xl mx-auto">
+<section
+    class={`${Astro.props.class || ''} ${
+        bgClass || ''
+    } block py-8 sm:py-16 md:py-24 lg:py-32 xl:py-40 px-5`}
+    id={id}
+>
+    <div class='container xl:max-w-screen-xl mx-auto'>
         <slot />
     </div>
 </section>

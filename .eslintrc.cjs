@@ -1,8 +1,5 @@
 module.exports = {
-    extends: [
-        'standard',
-        'plugin:astro/recommended'
-    ],
+    extends: ['standard', 'plugin:astro/recommended'],
     rules: {
         indent: ['error', 4]
     },

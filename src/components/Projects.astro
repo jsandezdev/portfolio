@@ -7,7 +7,7 @@ import { projects } from '../data/projects.astro'
 
 <Section id='projects' background='dark'>
     <SectionTitle>Proyectos</SectionTitle>
-    <div class="grid grid-cols-2 gap-4 lg:gap-12 items-start max-w-screen-xl mx-auto">
-        { projects.map((project, index) => <Project isEven={index % 2 === 0} project={project}/>) }
+    <div class='grid grid-cols-2 gap-4 lg:gap-12 items-start max-w-screen-xl mx-auto'>
+        {projects.map((project, index) => <Project isEven={index % 2 === 0} project={project} />)}
     </div>
 </Section>

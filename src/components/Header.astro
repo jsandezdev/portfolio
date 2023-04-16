@@ -7,35 +7,52 @@ const links = [
     { name: 'Sobre mí', href: '#about' },
     { name: 'Experiencia', href: '#experience' },
     { name: 'Proyectos', href: '#projects' }
-];
+]
 ---
 
-<header class="bg-jspurple-darker fixed top-0 left-0 right-0 z-50" id="header">
-    <nav class="flex lg:flex-nowrap items-center justify-between flex-wrap lg:flex-row p-4 max-w-screen-xl mx-auto px-5">
+<header class='bg-jspurple-darker fixed top-0 left-0 right-0 z-50' id='header'>
+    <nav
+        class='flex lg:flex-nowrap items-center justify-between flex-wrap lg:flex-row p-4 max-w-screen-xl mx-auto px-5'
+    >
         <input type='checkbox' id='menu' class='peer' hidden />
-        <a href="#home" aria-label="Inicio" class="flex items-center flex-shrink-0 text-white font-bold text-xl">
+        <a
+            href='#home'
+            aria-label='Inicio'
+            class='flex items-center flex-shrink-0 text-white font-bold text-xl'
+        >
             JS<GradientText>andez.dev</GradientText>
         </a>
-        <label for="menu" id="toggle-menu" class="peer-checked:[&>.open]:hidden peer-checked:[&>.close]:block cursor-pointer relative z-50 lg:hidden flex items-center px-3 py-2 text-jslightgrey hover:text-jswhite transition">
-            <MenuIcon/>
+        <label
+            for='menu'
+            id='toggle-menu'
+            class='peer-checked:[&>.open]:hidden peer-checked:[&>.close]:block cursor-pointer relative z-50 lg:hidden flex items-center px-3 py-2 text-jslightgrey hover:text-jswhite transition'
+        >
+            <MenuIcon />
         </label>
-        <div id="navbar" class='fixed flex sm:block flex-col justify-between p-4 lg:p-0 text-center lg:flex lg:flex-row lg:flex-wrap lg:static lg:gap-10 lg:items-center top-0 lg:top-auto left-0 lg:left-auto opacity-0 lg:opacity-100 w-0 lg:w-auto transition-all peer-checked:w-full peer-checked:h-full peer-checked:opacity-100 z-40 bg-jspurple-darker'>
-            <ul class="flex flex-col py-4 lg:py-0 lg:flex-row lg:flex-wrap lg:gap-10 lg:flex-grow ">
-                { links.map((link) => <li class="block">
-                    <a
-                        class="relative block py-4 lg:py-2 text-xl lg:text-lg"
-                        href={link.href}
-                        aria-label={`Ir a la sección "${link.name}"`}
-                    >
-                        {link.name}
-                        <span class="absolute bottom-0 left-0 w-0 invisible lg:visible"></span>
-                    </a>
-                </li>) }
+        <div
+            id='navbar'
+            class='fixed flex sm:block flex-col justify-between p-4 lg:p-0 text-center lg:flex lg:flex-row lg:flex-wrap lg:static lg:gap-10 lg:items-center top-0 lg:top-auto left-0 lg:left-auto opacity-0 lg:opacity-100 w-0 lg:w-auto transition-all peer-checked:w-full peer-checked:h-full peer-checked:opacity-100 z-40 bg-jspurple-darker'
+        >
+            <ul class='flex flex-col py-4 lg:py-0 lg:flex-row lg:flex-wrap lg:gap-10 lg:flex-grow'>
+                {
+                    links.map((link) => (
+                        <li class='block'>
+                            <a
+                                class='relative block py-4 lg:py-2 text-xl lg:text-lg'
+                                href={link.href}
+                                aria-label={`Ir a la sección "${link.name}"`}
+                            >
+                                {link.name}
+                                <span class='absolute bottom-0 left-0 w-0 invisible lg:visible' />
+                            </a>
+                        </li>
+                    ))
+                }
             </ul>
             <a
-                href="#contact"
+                href='#contact'
                 aria-label='Ir a la sección "contacto"'
-                class="bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite py-3 px-8 text-xl rounded-full transition-all duration-1000 font-bold block sm:inline-block"
+                class='bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite py-3 px-8 text-xl rounded-full transition-all duration-1000 font-bold block sm:inline-block'
             >
                 Contacto
             </a>
@@ -45,10 +62,10 @@ const links = [
 
 <style>
     header nav ul li a span {
-        -webkit-transition: width .3s ease-out 0s;
-        -moz-transition: width .3s ease-out 0s;
-        -o-transition: width .3s ease-out 0s;
-        transition: width .3s ease-out 0s;
+        -webkit-transition: width 0.3s ease-out 0s;
+        -moz-transition: width 0.3s ease-out 0s;
+        -o-transition: width 0.3s ease-out 0s;
+        transition: width 0.3s ease-out 0s;
     }
     header nav ul li a:hover span {
         @apply w-4/5;
@@ -57,47 +74,50 @@ const links = [
     }
 </style>
 
-<script type="module" is:inline>
-const menuInput = document.getElementById('menu')
-const headerHeight = document.getElementById('header').clientHeight
+<script type='module' is:inline>
+    const menuInput = document.getElementById('menu')
+    const headerHeight = document.getElementById('header').clientHeight
 
-document.getElementById('navbar').querySelectorAll('a').forEach((anchor) => {
-    anchor.addEventListener('click', (e) => {
-        e.preventDefault()
-        menuInput.checked = false
-        if (document.body.style.overflowY === 'hidden') toggleOverflow(false)
-    })
-})
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-        e.preventDefault()
-        const href = document.querySelector(anchor.getAttribute('href'))
-        if (href) {
-            window.scrollTo({
-                top: href.offsetTop - headerHeight
+    document
+        .getElementById('navbar')
+        .querySelectorAll('a')
+        .forEach((anchor) => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault()
+                menuInput.checked = false
+                if (document.body.style.overflowY === 'hidden') toggleOverflow(false)
             })
+        })
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault()
+            const href = document.querySelector(anchor.getAttribute('href'))
+            if (href) {
+                window.scrollTo({
+                    top: href.offsetTop - headerHeight
+                })
+            }
+        })
+    })
+
+    const toggleOverflow = (value) => {
+        if (value) {
+            window.scrollTo(0, 0)
+            document.body.style.overflowY = 'hidden'
+        } else {
+            document.body.style.overflowY = 'auto'
+        }
+    }
+
+    menuInput.addEventListener('change', (e) =>
+        e.target.checked ? toggleOverflow(true) : toggleOverflow(false)
+    )
+
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => {
+        if (e.matches) {
+            toggleOverflow(false)
+            menuInput.checked = false
         }
     })
-})
-
-const toggleOverflow = (value) => {
-    if (value) {
-        window.scrollTo(0, 0)
-        document.body.style.overflowY = 'hidden'
-    } else {
-        document.body.style.overflowY = 'auto'
-    }
-}
-
-menuInput.addEventListener('change', (e) =>
-    e.target.checked ? toggleOverflow(true) : toggleOverflow(false)
-)
-
-window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => {
-    if (e.matches) {
-        toggleOverflow(false)
-        menuInput.checked = false
-    }
-})
 </script>

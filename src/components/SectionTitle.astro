@@ -1,11 +1,13 @@
 ---
 import GradientText from './GradientText.astro'
-import TextSeparator from './TextSeparator.astro';
+import TextSeparator from './TextSeparator.astro'
 ---
 
-<div class={`${Astro.props.class || ''} flex justify-center mb-12 sm:mb-20`} data-aos="zoom-in">
+<div class={`${Astro.props.class || ''} flex justify-center mb-12 sm:mb-20`} data-aos='zoom-in'>
     <div>
-        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 inline-block"><GradientText><slot/></GradientText></h2>
-        <TextSeparator class="block"/>
+        <h2 class='text-4xl sm:text-5xl md:text-6xl font-bold mb-4 inline-block'>
+            <GradientText><slot /></GradientText>
+        </h2>
+        <TextSeparator class='block' />
     </div>
 </div>

@@ -2,42 +2,42 @@
 import Button from './Button.astro'
 import FormGroup from './FormGroup.astro'
 import Input from './Input.astro'
-import Textarea from './Textarea.astro';
+import Textarea from './Textarea.astro'
 ---
 
 <form
-    id="contact-form"
-    class="text-center max-w-xl mx-auto no-validated"
+    id='contact-form'
+    class='text-center max-w-xl mx-auto no-validated'
     novalidate
-    data-aos="fade-up"
+    data-aos='fade-up'
 >
     <FormGroup>
-        <Input name='name' type='text' placeholder="Introduce tu nombre" required />
+        <Input name='name' type='text' placeholder='Introduce tu nombre' required />
     </FormGroup>
     <FormGroup>
-        <Input name='email' type='email' placeholder="Introduce tu email" required />
+        <Input name='email' type='email' placeholder='Introduce tu email' required />
     </FormGroup>
     <FormGroup>
-        <Textarea name='message' rows={10} placeholder="Introduce tu mensaje" required />
+        <Textarea name='message' rows={10} placeholder='Introduce tu mensaje' required />
     </FormGroup>
-    <Button type="submit" variant='primary'>Enviar mensaje</Button>
+    <Button type='submit' variant='primary'>Enviar mensaje</Button>
 </form>
 
 <script is:inline>
-const form = document.getElementById('contact-form')
+    const form = document.getElementById('contact-form')
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault()
-    form.classList.add('validated')
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        form.classList.add('validated')
 
-    if (!form.checkValidity()) {
-        form.querySelectorAll(':invalid')[0].focus()
-        return
-    }
+        if (!form.checkValidity()) {
+            form.querySelectorAll(':invalid')[0].focus()
+            return
+        }
 
-    const formData = new FormData(form)
-    const data = Object.fromEntries(formData)
+        const formData = new FormData(form)
+        const data = Object.fromEntries(formData)
 
-    location.href = (`mailto:jordisandez@gmail.com?subject=${data.name} desde portfolio&body=${data.message}&cc=${data.email}`)
-})
+        location.href = `mailto:jordisandez@gmail.com?subject=${data.name} desde portfolio&body=${data.message}&cc=${data.email}`
+    })
 </script>

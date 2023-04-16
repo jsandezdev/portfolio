@@ -1,20 +1,30 @@
 ---
 export interface Props {
-    variant: 'primary' | 'light';
-    size?: 'sm' | 'md' | 'lg';
-    class?: string;
-    element?: 'anchor' | 'button';
-    href?: string;
-    type?: 'button' | 'submit' | 'reset';
-    download?: string;
-    onclick?: any;
-    'aria-label'?: string;
+    variant: 'primary' | 'light'
+    size?: 'sm' | 'md' | 'lg'
+    class?: string
+    element?: 'anchor' | 'button'
+    href?: string
+    type?: 'button' | 'submit' | 'reset'
+    download?: string
+    onclick?: any
+    'aria-label'?: string
 }
 
-const { variant, size = 'md', element = 'button', href = '#', type, download, onclick, 'aria-label': ariaLabel } = Astro.props
+const {
+    variant,
+    size = 'md',
+    element = 'button',
+    href = '#',
+    type,
+    download,
+    onclick,
+    'aria-label': ariaLabel
+} = Astro.props
 
 const colors = {
-    primary: 'bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite',
+    primary:
+        'bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite',
     light: 'text-jswhite hover:text-jspurple-dark hover:bg-jswhite border '
 }
 
@@ -28,26 +38,23 @@ const sizes = {
 
 const padding = sizes[size] || sizes.md
 
-const classes = `${Astro.props.class || ''} ${color} ${padding} rounded-full transition-all duration-300 font-bold block w-full text-center sm:w-auto sm:inline-block tracking-wider`
+const classes = `${
+    Astro.props.class || ''
+} ${color} ${padding} rounded-full transition-all duration-300 font-bold block w-full text-center sm:w-auto sm:inline-block tracking-wider`
 ---
 
-{ element === 'button' && (
-    <button
-        type={type}
-        onclick={onclick}
-        class={classes}
-    >
-        <slot/>
-    </button>
-)}
+{
+    element === 'button' && (
+        <button type={type} onclick={onclick} class={classes}>
+            <slot />
+        </button>
+    )
+}
 
-{ element === 'anchor' && (
-    <a
-        href={href}
-        download={download}
-        class={classes}
-        aria-label={ariaLabel}
-    >
-        <slot/>
-    </a>
-)}
+{
+    element === 'anchor' && (
+        <a href={href} download={download} class={classes} aria-label={ariaLabel}>
+            <slot />
+        </a>
+    )
+}

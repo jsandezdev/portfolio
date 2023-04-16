@@ -22,8 +22,16 @@ export const languages = {
     mongo: { label: 'MongoDB', icon: MongoIcon, class: 'text-mongo border-mongo' },
     html: { label: 'HTML5', icon: HTMLIcon, class: 'text-html border-html' },
     sass: { label: 'Sass', icon: SassIcon, class: 'text-sass border-sass' },
-    bootstrap: { label: 'Bootstrap', icon: BootstrapIcon, class: 'text-bootstrap border-bootstrap' },
-    typescript: { label: 'TypeScript', icon: TypescriptIcon, class: 'text-typescript border-typescript' },
+    bootstrap: {
+        label: 'Bootstrap',
+        icon: BootstrapIcon,
+        class: 'text-bootstrap border-bootstrap'
+    },
+    typescript: {
+        label: 'TypeScript',
+        icon: TypescriptIcon,
+        class: 'text-typescript border-typescript'
+    },
     vite: { label: 'Vite', icon: ViteIcon, class: 'text-vite border-vite' },
     next: { label: 'NextJs', icon: NextIcon, class: 'text-next border-next' }
 }
