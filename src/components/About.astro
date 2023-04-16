@@ -11,7 +11,11 @@ import photo from '../assets/project_birds.jpg'
             <img
                 class="rounded-2xl w-full max-w-md sm:max-w-md md:max-w-md lg:max-w-full mx-auto lg:mr-0 aspect-square object-cover overflow-hidden"
                 src={photo}
-                alt="Mi foto"/>
+                loading='lazy'
+                decoding='async'
+                fetchpriority='high'
+                alt="Mi foto"
+                title="Mi foto"/>
         </div>
         <div class="col-span-12 lg:col-span-7 text-jslightgrey text-md md:text-lg" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
             <p class="mb-4">

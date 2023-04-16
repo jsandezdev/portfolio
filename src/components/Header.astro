@@ -13,7 +13,7 @@ const links = [
 <header class="bg-jspurple-darker fixed top-0 left-0 right-0 z-50" id="header">
     <nav class="flex lg:flex-nowrap items-center justify-between flex-wrap lg:flex-row p-4 max-w-screen-xl mx-auto px-5">
         <input type='checkbox' id='menu' class='peer' hidden />
-        <a href="#home" class="flex items-center flex-shrink-0 text-white font-bold text-xl">
+        <a href="#home" aria-label="Inicio" class="flex items-center flex-shrink-0 text-white font-bold text-xl">
             JS<GradientText>andez.dev</GradientText>
         </a>
         <label for="menu" id="toggle-menu" class="peer-checked:[&>.open]:hidden peer-checked:[&>.close]:block cursor-pointer relative z-50 lg:hidden flex items-center px-3 py-2 text-jslightgrey hover:text-jswhite transition">
@@ -22,12 +22,23 @@ const links = [
         <div id="navbar" class='fixed flex sm:block flex-col justify-between p-4 lg:p-0 text-center lg:flex lg:flex-row lg:flex-wrap lg:static lg:gap-10 lg:items-center top-0 lg:top-auto left-0 lg:left-auto opacity-0 lg:opacity-100 w-0 lg:w-auto transition-all peer-checked:w-full peer-checked:h-full peer-checked:opacity-100 z-40 bg-jspurple-darker'>
             <ul class="flex flex-col py-4 lg:py-0 lg:flex-row lg:flex-wrap lg:gap-10 lg:flex-grow ">
                 { links.map((link) => <li class="block">
-                    <a class="relative block py-4 lg:py-2 text-xl lg:text-lg" href={link.href}>{link.name}
+                    <a
+                        class="relative block py-4 lg:py-2 text-xl lg:text-lg"
+                        href={link.href}
+                        aria-label={`Ir a la sección "${link.name}"`}
+                    >
+                        {link.name}
                         <span class="absolute bottom-0 left-0 w-0 invisible lg:visible"></span>
                     </a>
                 </li>) }
             </ul>
-            <a href="#contact" class="bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite py-3 px-8 text-xl rounded-full transition-all duration-1000 font-bold block sm:inline-block">Contacto</a>
+            <a
+                href="#contact"
+                aria-label='Ir a la sección "contacto"'
+                class="bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite py-3 px-8 text-xl rounded-full transition-all duration-1000 font-bold block sm:inline-block"
+            >
+                Contacto
+            </a>
         </div>
     </nav>
 </header>

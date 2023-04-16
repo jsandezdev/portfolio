@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://jsandez.dev/sitemap-index.xml

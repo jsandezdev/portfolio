@@ -11,6 +11,7 @@
     "lint": "eslint . --ext .js,.astro,.ts,.tsx"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.1",
     "@fontsource/poppins": "^4.5.10",
     "aos": "^2.3.4",

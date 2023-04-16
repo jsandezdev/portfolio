@@ -8,9 +8,10 @@ export interface Props {
     type?: 'button' | 'submit' | 'reset';
     download?: string;
     onclick?: any;
+    'aria-label'?: string;
 }
 
-const { variant, size = 'md', element = 'button', href = '#', type, download, onclick } = Astro.props
+const { variant, size = 'md', element = 'button', href = '#', type, download, onclick, 'aria-label': ariaLabel } = Astro.props
 
 const colors = {
     primary: 'bg-gradient-to-r from-jscyan to-jspink hover:from-jspink hover:to-jscyan text-jswhite',
@@ -45,6 +46,7 @@ const classes = `${Astro.props.class || ''} ${color} ${padding} rounded-full tra
         href={href}
         download={download}
         class={classes}
+        aria-label={ariaLabel}
     >
         <slot/>
     </a>
