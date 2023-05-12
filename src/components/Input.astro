@@ -7,8 +7,6 @@ export interface Props {
 }
 
 const { type = 'text', placeholder = '', name, required } = Astro.props
-
-console.log(required)
 ---
 
 <label for={name} class='sr-only'>{name}</label>

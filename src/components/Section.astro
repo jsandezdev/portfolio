@@ -14,12 +14,13 @@ const bgClasses = {
 }
 
 const bgClass = bgClasses[background] || bgClasses.default
+// const bgClass = ''
 ---
 
 <section
     class={`${Astro.props.class || ''} ${
         bgClass || ''
-    } block py-8 sm:py-16 md:py-24 lg:py-32 xl:py-40 px-5`}
+    } block py-8 sm:py-16 md:py-24 lg:py-32 xl:py-40 px-5 relative`}
     id={id}
 >
     <div class='container xl:max-w-screen-xl mx-auto'>
