@@ -28,7 +28,8 @@ module.exports = {
                 // next: '#000000',
                 next: '#FFFFFF',
                 vite: '#646CFF',
-                typescript: '#3178C6'
+                typescript: '#3178C6',
+                javascript: '#F7DF1E'
             }
         }
     },

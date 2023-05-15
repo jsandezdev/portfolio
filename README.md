@@ -6,6 +6,7 @@ Welcome to my portfolio! This is a personal project showcasing a selection of my
 
 -   [Astro](https://astro.build/)
 -   [Tailwind CSS](https://tailwindcss.com/)
+-   [JavaScript](https://javascript.com/)
 
 ## Screenshots
 

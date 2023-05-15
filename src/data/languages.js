@@ -11,6 +11,7 @@ import BootstrapIcon from '../components/icons/Bootstrap.astro'
 import TypescriptIcon from '../components/icons/Typescript.astro'
 import ViteIcon from '../components/icons/Vite.astro'
 import NextIcon from '../components/icons/Next.astro'
+import JavaScriptIcon from '../components/icons/JavaScript.astro'
 
 export const languages = {
     react: { label: 'React', icon: ReactIcon, class: 'text-react border-react' },
@@ -33,5 +34,6 @@ export const languages = {
         class: 'text-typescript border-typescript'
     },
     vite: { label: 'Vite', icon: ViteIcon, class: 'text-vite border-vite' },
-    next: { label: 'NextJs', icon: NextIcon, class: 'text-next border-next' }
+    next: { label: 'NextJs', icon: NextIcon, class: 'text-next border-next' },
+    javascript: { label: 'Javascript', icon: JavaScriptIcon, class: 'text-javascript border-javascript' }
 }
