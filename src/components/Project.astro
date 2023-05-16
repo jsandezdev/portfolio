@@ -5,6 +5,7 @@ import Tag from './Tag.astro'
 import GithubIcon from './icons/Github.astro'
 import LinkIcon from './icons/Link.astro'
 import type { Project } from '../models/Project.astro'
+import ImageModal from './ImageModal.astro'
 
 export interface Props {
     isEven: boolean
@@ -15,9 +16,10 @@ const { isEven, project } = Astro.props
 ---
 
 <div
-    class='col-span-2 sm:col-span-1 lg:col-span-2 grid grid-cols-12 bg-gradient-to-r from-jscyan/5 to-jspink/5 rounded-xl bg-opacity-10 overflow-hidden'
+    class='project col-span-2 sm:col-span-1 lg:col-span-2 grid grid-cols-12 bg-gradient-to-r from-jscyan/5 to-jspink/5 rounded-xl bg-opacity-10 overflow-hidden'
     data-aos={`${isEven ? 'fade-left' : 'fade-right'}`}
     data-aos-delay='200'
+    data-id={project.id}
 >
     <div
         class={`col-span-12 lg:col-span-7 lg:p-5 flex items-stretch ${
@@ -26,7 +28,7 @@ const { isEven, project } = Astro.props
     >
         <div class='relative flex items-stretch'>
             <img
-                class='w-full max-w-full mx-auto lg:mr-0 aspect-square lg:aspect-video object-cover overflow-hidden'
+                class='w-full hover:cursor-zoom-in max-w-full mx-auto lg:mr-0 aspect-square lg:aspect-video object-cover overflow-hidden'
                 src={project.image}
                 alt={project.title}
                 title={project.title}
@@ -78,3 +80,9 @@ const { isEven, project } = Astro.props
         </div>
     </div>
 </div>
+
+<ImageModal
+    id={`project-${project.id}-modal`}
+    title={project.title}
+    image={project.image}
+/>
