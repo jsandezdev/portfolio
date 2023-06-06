@@ -74,7 +74,7 @@ const { isEven, project } = Astro.props
         </span>
         <span class='mb-2 block text-md text-jswhite font-bold'>{project.subtitle}</span>
         <TextSeparator size='sm' class='mb-4' />
-        <p class='text-jslightgrey mb-4'>{project.content}</p>
+        <p class='text-jslightgrey mb-4' set:html={project.content}></p>
         <div class='tags flex flex-row flex-wrap gap-2'>
             {project.tags.map((tag) => <Tag label={tag.label} icon={tag.icon} class={tag.class} />)}
         </div>

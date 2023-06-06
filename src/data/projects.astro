@@ -1,18 +1,18 @@
 ---
 import { languages } from './languages'
 import birdsImage from '../assets/project_birds.jpg'
-import portfolioImage from '../assets/project_portfolio.jpg'
+// import portfolioImage from '../assets/project_portfolio.jpg'
 import rumpaImage from '../assets/project_rumpa.jpg'
 import type { Project } from '../models/Project.astro'
 
 export const projects: Project[] = [
     {
         id: 1,
-        title: 'Padrinos Birds Friends',
-        subtitle: 'App gestión padrinos',
+        title: 'Admin Birds Friends',
+        subtitle: 'App gestión asociación',
         content:
             'Lorem ipsum dolor sit amet consectetur ad eque natus, odit officiis est alias sunt, nostru Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
-        github: 'https://github.com/jordisandez/astro-portfolio',
+        github: 'https://github.com/jsandezdev/astro-portfolio',
         link: 'https://www.google.com',
         image: birdsImage,
         tags: [
@@ -30,27 +30,47 @@ export const projects: Project[] = [
         title: 'Rumpa estudio',
         subtitle: 'Design agency website',
         content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
-        link: 'https://rumpa.jsandez.dev',
+            `Portfolio del estudio de diseño gráfico <strong>rumpaestudio</strong>. Sitio estático generado con Astro haciendo énfasis en el rendimiento y en el posicionamiento web. <br/>
+            <br/>
+            Diseño aportado por el cliente <br/><br/>`,
+        link: 'https://rumpaestudio.com',
         image: rumpaImage,
         tags: [languages.astro, languages.javascript, languages.tailwind]
     },
-    {
-        id: 3,
-        title: 'Portfolio',
-        subtitle: 'My personal portfolio',
-        content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempione! Eaque animi corrupti consequuntur omnis',
-        tags: [languages.astro, languages.javascript, languages.tailwind],
-        image: portfolioImage
-    },
+    // {
+    //     id: 3,
+    //     title: 'Portfolio',
+    //     subtitle: 'My personal portfolio',
+    //     content:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempione! Eaque animi corrupti consequuntur omnis',
+    //     tags: [languages.astro, languages.javascript, languages.tailwind],
+    //     image: portfolioImage
+    // },
     {
         id: 4,
         title: 'Padrinos Birds Friends',
-        subtitle: 'App gestión padrinos',
+        subtitle: 'Formulario para nuevos padrinos',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing  natus, odit officiis est alias s, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis Lorem ipsum d iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
         tags: [languages.react, languages.node, languages.astro, languages.tailwind],
+        image: birdsImage
+    },
+    {
+        id: 5,
+        title: 'Fitlogr',
+        subtitle: 'App retos fitness',
+        link: 'https://fitlogr.jsandez.dev',
+        content:
+            'Proyecto personal para realizar retos relacionados con el fitness. Actualmente en desarrollo',
+        tags: [
+            languages.next,
+            languages.react,
+            languages.typescript,
+            languages.mongo,
+            languages.amazonS3,
+            languages.prisma,
+            languages.tailwind
+        ],
         image: birdsImage
     }
 ]

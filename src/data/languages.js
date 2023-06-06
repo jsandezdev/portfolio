@@ -12,6 +12,8 @@ import TypescriptIcon from '../components/icons/Typescript.astro'
 import ViteIcon from '../components/icons/Vite.astro'
 import NextIcon from '../components/icons/Next.astro'
 import JavaScriptIcon from '../components/icons/JavaScript.astro'
+import PrismaIcon from '../components/icons/Prisma.astro'
+import AmazonS3Icon from '../components/icons/AmazonS3.astro'
 
 export const languages = {
     react: { label: 'React', icon: ReactIcon, class: 'text-react border-react' },
@@ -35,5 +37,7 @@ export const languages = {
     },
     vite: { label: 'Vite', icon: ViteIcon, class: 'text-vite border-vite' },
     next: { label: 'NextJs', icon: NextIcon, class: 'text-next border-next' },
-    javascript: { label: 'Javascript', icon: JavaScriptIcon, class: 'text-javascript border-javascript' }
+    javascript: { label: 'Javascript', icon: JavaScriptIcon, class: 'text-javascript border-javascript' },
+    prisma: { label: 'Prisma ORM', icon: PrismaIcon, class: 'text-prisma border-prisma' },
+    amazonS3: { label: 'Amazon S3', icon: AmazonS3Icon, class: 'text-amazonS3 border-amazonS3' }
 }

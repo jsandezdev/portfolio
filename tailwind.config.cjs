@@ -29,7 +29,10 @@ module.exports = {
                 next: '#FFFFFF',
                 vite: '#646CFF',
                 typescript: '#3178C6',
-                javascript: '#F7DF1E'
+                javascript: '#F7DF1E',
+                // prisma: '#2D3748',
+                prisma: '#FFFFFF',
+                amazonS3: '#569A31'
             }
         }
     },
