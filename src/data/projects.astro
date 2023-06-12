@@ -3,17 +3,19 @@ import { languages } from './languages'
 import birdsImage from '../assets/project_birds.jpg'
 // import portfolioImage from '../assets/project_portfolio.jpg'
 import rumpaImage from '../assets/project_rumpa.jpg'
+import padrinosImage from '../assets/project_padrinos.jpg'
+import fitlogrImage from '../assets/project_fitlogr.jpg'
 import type { Project } from '../models/Project.astro'
 
 export const projects: Project[] = [
     {
         id: 1,
         title: 'Admin Birds Friends',
-        subtitle: 'App gestión asociación',
+        subtitle: 'App gestión',
         content:
-            'Lorem ipsum dolor sit amet consectetur ad eque natus, odit officiis est alias sunt, nostru Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
-        github: 'https://github.com/jsandezdev/astro-portfolio',
-        link: 'https://www.google.com',
+            'Portal web para la gestión de los animales, los apadrinamientos, y la comunicación con padrinos de la asociación protectora de aves <a href="https://birdsfriends.com/" target="_blank"><strong>Birds Friends</strong></a>. <br/>',
+        // github: 'https://github.com/jsandezdev/astro-portfolio',
+        link: 'https://birds.jsandez.dev',
         image: birdsImage,
         tags: [
             languages.vite,
@@ -28,11 +30,11 @@ export const projects: Project[] = [
     {
         id: 2,
         title: 'Rumpa estudio',
-        subtitle: 'Design agency website',
+        subtitle: 'Portfolio empresarial',
         content:
-            `Portfolio del estudio de diseño gráfico <strong>rumpaestudio</strong>. Sitio estático generado con Astro haciendo énfasis en el rendimiento y en el posicionamiento web. <br/>
+            `Portfolio del estudio de diseño gráfico <strong>rumpaestudio</strong>. Sitio estático generado con Astro haciendo especial hincapié en el rendimiento y en el posicionamiento web. <br/>
             <br/>
-            Diseño aportado por el cliente <br/><br/>`,
+            Diseño aportado por el cliente <br/>`,
         link: 'https://rumpaestudio.com',
         image: rumpaImage,
         tags: [languages.astro, languages.javascript, languages.tailwind]
@@ -49,19 +51,22 @@ export const projects: Project[] = [
     {
         id: 4,
         title: 'Padrinos Birds Friends',
-        subtitle: 'Formulario para nuevos padrinos',
+        subtitle: 'Portal alta padrinos',
+        link: 'https://padrinos.birdsfriends.com',
         content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing  natus, odit officiis est alias s, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis Lorem ipsum d iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad! Tempore ullam iusto neque natus, odit officiis est alias sunt, nostrum reiciendis labore quod ratione! Eaque animi corrupti consequuntur omnis',
-        tags: [languages.react, languages.node, languages.astro, languages.tailwind],
-        image: birdsImage
+            'Sitio web para el alta de nuevos padrinos para la asociación protectora de aves <a href="https://birdsfriends.com/" target="_blank"><strong>Birds Friends</strong></a>',
+        // tags: [languages.react, languages.node, languages.astro, languages.tailwind],
+        tags: [languages.vite, languages.react, languages.bootstrap, languages.sass],
+        image: padrinosImage
     },
     {
         id: 5,
         title: 'Fitlogr',
         subtitle: 'App retos fitness',
         link: 'https://fitlogr.jsandez.dev',
+        github: 'https://github.com/jsandezdev/fitlogr',
         content:
-            'Proyecto personal para realizar retos relacionados con el fitness. Actualmente en desarrollo',
+            'Proyecto personal para realizar retos relacionados con el fitness, además de realizar un seguimiento y control a lo largo del tiempo. <br/><br/> Actualmente en desarrollo',
         tags: [
             languages.next,
             languages.react,
@@ -71,7 +76,7 @@ export const projects: Project[] = [
             languages.prisma,
             languages.tailwind
         ],
-        image: birdsImage
+        image: fitlogrImage
     }
 ]
 ---

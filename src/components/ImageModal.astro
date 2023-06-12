@@ -1,4 +1,6 @@
 ---
+import { Image } from '@astrojs/image/components'
+
 export interface Props {
     id: string
     title: string
@@ -14,13 +16,16 @@ const { id, title, image } = Astro.props
     style="display: none;"
 >
     <button class="modal-close fixed z-[110] top-6 right-8 text-white text-5xl font-bold" type="button">&times;</button>
-    <img
+    <Image
         class="max-w-[100%] max-h-[100%] object-cover"
         src={image}
         alt={title}
         title={title}
-        loading='lazy'
+        width={1920}
+        height={1920}
+        format='webp'
+        loading="lazy"
         decoding='async'
-        fetchpriority='high'
+        fetchpriority='low'
     />
 </div>

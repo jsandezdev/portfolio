@@ -2,6 +2,7 @@
 import Section from './Section.astro'
 import SectionTitle from './SectionTitle.astro'
 import photo from '../assets/project_birds.jpg'
+import { Image } from '@astrojs/image/components'
 ---
 
 <Section id='about' background='dark'>
@@ -13,14 +14,17 @@ import photo from '../assets/project_birds.jpg'
             data-aos-duration='1000'
             data-aos-delay='500'
         >
-            <img
+            <Image
                 class='rounded-2xl w-full max-w-md sm:max-w-md md:max-w-md lg:max-w-full mx-auto lg:mr-0 aspect-square object-cover overflow-hidden'
                 src={photo}
-                loading='lazy'
-                decoding='async'
-                fetchpriority='high'
                 alt='Mi foto'
                 title='Mi foto'
+                width={1920}
+                height={1920}
+                format='webp'
+                loading="lazy"
+                decoding='async'
+                fetchpriority='low'
             />
         </div>
         <div
