@@ -1,7 +1,7 @@
 ---
 import Section from './Section.astro'
 import SectionTitle from './SectionTitle.astro'
-import photo from '../assets/project_birds.jpg'
+import photo from '../../public/profile.png'
 import { Image } from '@astrojs/image/components'
 ---
 
@@ -15,7 +15,7 @@ import { Image } from '@astrojs/image/components'
             data-aos-delay='500'
         >
             <Image
-                class='rounded-2xl w-full max-w-md sm:max-w-md md:max-w-md lg:max-w-full mx-auto lg:mr-0 aspect-square object-cover overflow-hidden'
+                class='rounded-[2.5rem] w-full max-w-md sm:max-w-md md:max-w-md lg:max-w-full mx-auto lg:mr-0 aspect-square object-cover overflow-hidden'
                 src={photo}
                 alt='Mi foto'
                 title='Mi foto'
