@@ -8,13 +8,6 @@ Welcome to my portfolio! This is a personal project showcasing a selection of my
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [JavaScript](https://javascript.com/)
 
-## Screenshots
-
-Here are some screenshots of my portfolio:
-
-![Screenshot 1](./screenshots/screenshot1.png)
-![Screenshot 2](./screenshots/screenshot2.png)
-
 ## Contributions
 
 Contributions are welcome! If you want to improve or add new features to my portfolio, please create a pull request with your changes. I'll be happy to review them and collaborate with you.
