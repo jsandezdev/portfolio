@@ -32,7 +32,8 @@ module.exports = {
                 javascript: '#F7DF1E',
                 // prisma: '#2D3748',
                 prisma: '#FFFFFF',
-                amazonS3: '#569A31'
+                amazonS3: '#569A31',
+                cloudinary: '#3448c5'
             }
         }
     },
