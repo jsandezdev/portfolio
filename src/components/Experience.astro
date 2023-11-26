@@ -6,7 +6,17 @@ import TimeLine from './TimeLine.astro'
 
 const items = [
     {
-        label: 'Noviembre 2022 - Actualidad',
+        label: 'Julio 2023 - Actualidad',
+        title: 'Desarrollador web',
+        title2: 'Next Digital',
+        subtitle: 'Madrid, Madrid (remoto)',
+        content: [
+            { title: 'Desarrollo y mantenimiento de aplicación web con React, TailwindCSS y Typescript' },
+            { title: 'Desarrollo y mantenimiento de API GraphQL hecha en NodeJs, NestJs, con BBDD PostgreSQL, aplicando DDD y arquitectura hexagonal' }
+        ]
+    },
+    {
+        label: 'Noviembre 2022 - Julio 2023',
         title: 'Desarrollador web',
         title2: 'Asociación Birds Friends',
         subtitle: 'Barcelona, Barcelona',
@@ -68,6 +78,6 @@ const items = [
         <TimeLine class='lg:my-10' items={items} />
     </div>
     <div class='sm:flex sm:flex-col sm:items-center' data-aos='fade-up' data-aos-delay='200'>
-        <Button onclick="window.open('CV 2023_v3.pdf')" variant='light'>Descargar CV</Button>
+        <Button onclick="window.open('CV 2023_v4.pdf')" variant='light'>Descargar CV</Button>
     </div>
 </Section>
